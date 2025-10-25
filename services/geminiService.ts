@@ -1,11 +1,11 @@
 import { GoogleGenAI, Modality, Type } from "@google/genai";
 import type { ChatMessage } from '../types';
-console.log(process.env.API_KEY)
-if (!process.env.API_KEY) {
+console.log(import.meta.env.VITE_API_KEY)
+if (!import.meta.env.VITE_API_KEY) {
     throw new Error("API_KEY environment variable not set");
 }
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
 const imageModel = 'gemini-2.5-flash-image';
 const textModel = 'gemini-2.5-flash';
 
