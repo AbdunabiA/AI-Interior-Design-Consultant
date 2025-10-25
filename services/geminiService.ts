@@ -1,6 +1,6 @@
 import { GoogleGenAI, Modality, Type } from "@google/genai";
 import type { ChatMessage } from '../types';
-
+console.log(process.env.API_KEY)
 if (!process.env.API_KEY) {
     throw new Error("API_KEY environment variable not set");
 }
